@@ -15,7 +15,7 @@
   <main class="w-100 h-100 d-flex justify-content-center container p-0">
     <div class="w-100 h-100 d-flex flex-wrap mt-5 border rounded shadow p-4">
       <h2 class="title">Search by Digimon Name or Level</h2>
-      <form class="form-inline w-100 d-flex flex-wrap align-items-center">
+      <form class="form-inline w-100 d-flex flex-wrap align-items-center" id="form">
         <fieldset class="form-group mr-3 mb-2 w-75">
           <label for="nameDigimon" class="sr-only">Password</label>
           <input type="text" class="form-control w-100" id="nameDigimon" placeholder="Name or Level">
@@ -23,17 +23,10 @@
         <button type="submit" class="btn btn-primary mb-2">Search!</button>
       </form>
 
-      <div class="list-group w-100 mt-3">
-        <article class="list-group-item">
-          <figure>
-            <img src="" alt="">
-          </figure>
-          <h2></h2>
-          <h3></h3>
-        </article>
+      <div class="list-group w-100 mt-3" id="result">
       </div>
     </div>
   </main>
-  
+<script src="assets/js/app.js"></script>
 </body>
 </html>

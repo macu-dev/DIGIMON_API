@@ -21,3 +21,7 @@ body{
   border: none !important;
   border-top:  1px solid rgba(0,0,0,.125) !important;
 }
+
+.container-text {
+  align-content:center;
+}
