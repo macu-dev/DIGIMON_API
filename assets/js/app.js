@@ -30,6 +30,8 @@ function validation(e) {
       title: 'Oops...',
       text: 'Error en el llenado, por favor vuelva a ingresar'
     })
+
+    form.reset();
   }else {
     displayMatches(nameDigimon);
   }
