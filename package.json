@@ -1,0 +1,22 @@
+{
+  "name": "digimon_api",
+  "version": "1.0.0",
+  "description": "una app para buscar digimon",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macu-dev/DIGIMON_API.git"
+  },
+  "author": "Maria Claudia Pérez Escalante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/macu-dev/DIGIMON_API/issues"
+  },
+  "homepage": "https://github.com/macu-dev/DIGIMON_API#readme",
+  "dependencies": {
+    "sweetalert2": "^10.12.5"
+  }
+}

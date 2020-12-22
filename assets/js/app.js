@@ -1,10 +1,12 @@
+import Swal from '/node_modules/sweetalert2/src/sweetalert2.js'
+
  const endpoint = 'https://digimon-api.vercel.app/api/digimon';
  const digimons = [];
 
  fetch(endpoint)
   .then(blob => blob.json())
-  .then(data => digimons.push(...data));
-
+  .then(data => digimons.push(...data))
+ 
 function firstLetterUpperCase (string) {
   return string.charAt(0).toUpperCase().concat(string.substring(1, string.length));
 }
@@ -20,18 +22,19 @@ function findMatches(wordMatch, digimons) {
 function validation(e) {
   e.preventDefault();
   const nameDigimon = document.querySelector("#nameDigimon").value;
+  const isNumber = /^[0-9]+$/;
 
-  if(nameDigimon) {
-    displayMatches(nameDigimon);
+  if(nameDigimon.match(isNumber) || nameDigimon === '' ) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Error en el llenado, por favor vuelva a ingresar'
+    })
   }else {
-    console.log('ingrese un valor por favor')
+    displayMatches(nameDigimon);
   }
 
 }
-
-
-
-
 function displayMatches(search){
   const matchArray = findMatches(search, digimons);
   const html = matchArray.map(({name,img, level}) => {
