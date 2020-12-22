@@ -15,9 +15,25 @@ function findMatches(wordMatch, digimons) {
   })
 }
 
-function displayMatches(e){
+//validation 
+
+function validation(e) {
   e.preventDefault();
-  const matchArray = findMatches(this.children[0].children[1].value, digimons);
+  const nameDigimon = document.querySelector("#nameDigimon").value;
+
+  if(nameDigimon) {
+    displayMatches(nameDigimon);
+  }else {
+    console.log('ingrese un valor por favor')
+  }
+
+}
+
+
+
+
+function displayMatches(search){
+  const matchArray = findMatches(search, digimons);
   const html = matchArray.map(({name,img, level}) => {
     return `
       <article class="list-group-item d-flex flex-wrap">
@@ -38,4 +54,4 @@ function displayMatches(e){
 const result = document.querySelector("#result");
 const form = document.querySelector("#form");
 
-form.addEventListener('submit', displayMatches)
+form.addEventListener('submit', validation);
